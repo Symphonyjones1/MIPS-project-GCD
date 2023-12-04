@@ -72,3 +72,7 @@ illegalInput:
     # Exit program
     li $v0, 10
     syscall
+
+euclideanGCD:
+    move $t0, $s1   # Copy $s1 to $t0
+    move $t1, $s2   # Copy $s2 to $t1
