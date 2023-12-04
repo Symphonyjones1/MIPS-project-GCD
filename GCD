@@ -1,0 +1,6 @@
+# Data section
+.data
+promptL:    .asciiz "Enter value for L: "
+promptM:    .asciiz "Enter value for M: "
+promptN:    .asciiz "Enter value for N: "
+illegalMsg: .asciiz "Illegal Number! Enter a number greater than 20\n"
