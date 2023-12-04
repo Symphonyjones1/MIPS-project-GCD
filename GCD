@@ -25,3 +25,8 @@ li $v0, 4
     syscall
     jal getInput   # Get input for M
     move $s1, $v0  # Save M in $s1
+li $v0, 4
+    la $a0, promptN
+    syscall
+    jal getInput   # Get input for N
+    move $s2, $v0  # Save N in $s2
