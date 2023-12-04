@@ -90,3 +90,8 @@ euclideanLoop:
     move $t1, $t2
 
     j euclideanLoop
+
+euclideanDone:
+    # The GCD is in $t0
+    move $s3, $t0  # Save GCD in $s3
+    jr $ra
