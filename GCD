@@ -14,3 +14,9 @@ main:
     li $v0, 4
     la $a0, debugStartMsg
     syscall
+# Step 1: Input three integer numbers L, M, and N
+    li $v0, 4
+    la $a0, promptL
+    syscall
+    jal getInput   # Get input for L
+    move $s0, $v0  # Save L in $s0
