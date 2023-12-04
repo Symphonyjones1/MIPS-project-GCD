@@ -51,3 +51,9 @@ getInput:
     
     jr $ra         # Return with the input value
 
+illegalInput:
+    li $v0, 4      # Print error message
+    la $a0, illegalMsg
+    syscall
+    
+    j main         # Restart the input process
