@@ -57,3 +57,18 @@ illegalInput:
     syscall
     
     j main         # Restart the input process
+
+
+    # Debugging: Print GCD
+    li $v0, 4
+    la $a0, gcdMsg
+    syscall
+
+    # Print the result
+    li $v0, 1
+    move $a0, $s3
+    syscall
+
+    # Exit program
+    li $v0, 10
+    syscall
