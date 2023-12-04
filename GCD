@@ -7,3 +7,10 @@ illegalMsg: .asciiz "Illegal Number! Enter a number greater than 20\n"
 gcdMsg:     .asciiz "GCD: "
 debugStartMsg: .asciiz "Program Start\n"
 debugExitMsg:  .asciiz "Program Exit\n"
+# Text section
+.text
+main:
+    # Debugging: Print a message at the beginning of the program
+    li $v0, 4
+    la $a0, debugStartMsg
+    syscall
