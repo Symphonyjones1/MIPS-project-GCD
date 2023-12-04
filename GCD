@@ -44,3 +44,10 @@ li $v0, 4
 # Exit program
     li $v0, 10
     syscall
+
+getInput:
+    li $v0, 5      # Read integer input
+    syscall
+    
+    jr $ra         # Return with the input value
+
