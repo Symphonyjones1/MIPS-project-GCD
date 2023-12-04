@@ -1,3 +1,4 @@
+
 # Data section
 .data
 promptL:    .asciiz "Enter value for L: "
@@ -76,3 +77,16 @@ illegalInput:
 euclideanGCD:
     move $t0, $s1   # Copy $s1 to $t0
     move $t1, $s2   # Copy $s2 to $t1
+
+euclideanLoop:
+    beqz $t1, euclideanDone   # If $t1 is zero, GCD is in $t0
+
+    # Calculate remainder using division
+    div $t0, $t1
+    mfhi $t2
+
+    # Swap values for the next iteration
+    move $t0, $t1
+    move $t1, $t2
+
+    j euclideanLoop
