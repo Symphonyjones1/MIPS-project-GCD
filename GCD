@@ -36,3 +36,11 @@ li $v0, 4
     ble $s2, 20, illegalInput 
  # Call gcd calculation function
     jal gcdCalculation
+# Debugging: Print a message before exiting the program
+    li $v0, 4
+    la $a0, debugExitMsg
+    syscall
+
+# Exit program
+    li $v0, 10
+    syscall
